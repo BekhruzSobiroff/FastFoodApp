@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reset Password</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f4f4f4;
+            font-family: Arial, sans-serif;
+        }
+
+        .reset-password-container {
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            max-width: 320px;
+            width: 100%;
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .input-field {
+            margin-bottom: 20px;
+        }
+
+        .input-field input {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .sign-up-button {
+            display: block;
+            width: 100%;
+            padding: 12px;
+            font-size: 16px;
+            background-color: #ff3b30;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .sign-up-button:hover {
+            background-color: #e62e23;
+        }
+    </style>
+</head>
+<body>
+<div class="reset-password-container">
+    <h2>Reset Password</h2>
+<form action="/forgot/verificate" method="post">
+    <div class="input-field">
+        <input type="password" name="password" placeholder="New Password" id="new-password" required>
+    </div>
+    <div class="input-field">
+        <input type="password" placeholder="Confirm Password" id="confirm-password" required>
+    </div>
+    <button class="sign-up-button">Reset Password</button>
+</form>
+</div>
+
+<script>
+    const newPasswordInput = document.getElementById('new-password');
+    const confirmPasswordInput = document.getElementById('confirm-password');
+    const resetButton = document.querySelector('.sign-up-button');
+
+    resetButton.addEventListener('click', () => {
+        const newPassword = newPasswordInput.value;
+        const confirmPassword = confirmPasswordInput.value;
+
+        if (newPassword === confirmPassword) {
+            // Add logic to reset the password
+            console.log('Password reset successful!');
+        } else {
+            alert('Passwords do not match. Please try again.');
+        }
+    });
+</script>
+</body>
+</html>
