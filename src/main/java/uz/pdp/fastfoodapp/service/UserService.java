@@ -22,4 +22,7 @@ public void add(User user){
 public int updatePasswordWithEmail(UserLoginDto userLoginDto) {
    return userRepository.updatePassword(userLoginDto.email(), userLoginDto.password());
 }
+public boolean findUserByEmail(String email) {
+    return userRepository.existsUserByEmail(email);
+}
 }

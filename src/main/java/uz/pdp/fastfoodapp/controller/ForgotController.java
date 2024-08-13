@@ -23,9 +23,10 @@ private final UserService userService;
 }
 @PostMapping
     public String forgotForPost(@RequestParam String email) {
-   Email = email;
-    return "verificationResend";
-
+  if (userService.findUserByEmail(email)) {
+      Email = email;
+      return "verificationResend";
+  }else return "forgot";
     }
 @GetMapping("/recode")
     public String forgotForRecode(@RequestParam String num1, @RequestParam String num2, @RequestParam String num3, @RequestParam String num4) {
