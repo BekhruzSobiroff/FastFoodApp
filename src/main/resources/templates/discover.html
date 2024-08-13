@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Delivery App</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+
+        header {
+            background-color: #fff;
+            padding: 10px;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .header-content {
+            display: flex;
+            align-items: center;
+        }
+
+        .location {
+            font-size: 14px;
+            color: #333;
+        }
+
+        .profile-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+        }
+
+        .discount-banner {
+            background-color: #ff6600;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            margin: 15px;
+            border-radius: 10px;
+        }
+
+        .order-btn {
+            background-color: #000;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 15px;
+            margin-top: 20px;
+        }
+
+        .section-header h3 {
+            margin: 0;
+        }
+
+        .see-all {
+            color: #ff6600;
+            text-decoration: none;
+        }
+
+        .food-cards {
+            display: flex;
+            overflow-x: scroll;
+            padding: 10px;
+        }
+
+        .food-card {
+            background-color: #fff;
+            margin-right: 10px;
+            border-radius: 10px;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+            width: 150px;
+            text-align: center;
+        }
+
+        .food-card img {
+            width: 100%;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+        }
+
+        .food-details {
+            padding: 10px;
+        }
+
+        .bottom-nav {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            background-color: #fff;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            box-shadow: 0px -2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .nav-item {
+            color: #333;
+            text-decoration: none;
+            font-size: 12px;
+        }
+
+        .nav-item.active {
+            color: #ff6600;
+        }
+
+    </style>
+</head>
+<body>
+<header>
+    <div class="header-content">
+        <span class="location">Home, JL. Soekarno Hatta 15A</span>
+        <img src="profile-icon.png" alt="Profile Icon" class="profile-icon">
+    </div>
+</header>
+
+<section class="discount-banner">
+    <div class="banner-content">
+        <h2>Get your 30% daily discount now!</h2>
+        <button class="order-btn">Order now</button>
+    </div>
+</section>
+
+<section class="fastest-delivery">
+    <div class="section-header">
+        <h3>Fastest delivery 🔥</h3>
+        <a href="#" class="see-all">See all</a>
+    </div>
+    <div class="food-cards">
+        <div class="food-card">
+            <img src="crazy-taco.jpg" alt="Crazy Taco">
+            <div class="food-details">
+                <h4>Crazy Taco</h4>
+                <p>€3.00 • 40-50min • 9.5</p>
+            </div>
+        </div>
+        <div class="food-card">
+            <img src="la-sala.jpg" alt="La Sala">
+            <div class="food-details">
+                <h4>La Sala</h4>
+                <p>€2.00</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="popular-items">
+    <div class="section-header">
+        <h3>Popular items ❤️</h3>
+        <a href="#" class="see-all">See all</a>
+    </div>
+    <div class="food-cards">
+        <div class="food-card">
+            <img src="popular-item1.jpg" alt="Popular Item 1">
+            <div class="food-details">
+                <h4>Item 1</h4>
+                <p>€4.00</p>
+            </div>
+        </div>
+        <div class="food-card">
+            <img src="popular-item2.jpg" alt="Popular Item 2">
+            <div class="food-details">
+                <h4>Item 2</h4>
+                <p>€5.00</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<nav class="bottom-nav">
+    <a href="#" class="nav-item active">Discover</a>
+    <a href="#" class="nav-item">Restaurants</a>
+    <a href="#" class="nav-item">Search</a>
+    <a href="#" class="nav-item">Favorite</a>
+    <a href="/profile" class="nav-item">Profile</a>
+</nav>
+</body>
+</html>
